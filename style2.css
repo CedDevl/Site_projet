@@ -1,0 +1,331 @@
+/*----------------------REGLES GENERALES----------------------*/
+
+*{box-sizing:border-box;margin: 0;padding: 0;min-height: 0;outline: none;}
+html{
+    background-color:;
+}
+
+/*----------------------POLICES----------------------*/
+
+@font-face {
+    font-family: "Eclipse Demo";
+    src: url("../font/Eclipse Demo.ttf")
+}
+@font-face {
+    font-family: "Long_Shot";
+    src: url("../font/Long_Shot.ttf")
+}
+@font-face {
+    font-family: "Champagne";
+    src: url("../font/Champagne & Limousines.ttf")
+}
+
+/*---------------------------MENU---------------------------*/
+#photo_accueil{
+    width: 100%;
+    height: 100%;
+}
+#page1 #header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+#logo_sociaux{
+    flex-direction: column;
+    position:absolute;
+    align-content: space-around;
+    z-index: 1;
+    right: 0;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #EC955B;
+}
+nav a{
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    font-family: 'Dancing script';
+    font-size: 200%;
+    border:1px solid black;
+    width: 100%;
+    height: 100%;
+}
+nav a:hover{
+    box-shadow: 0px 0px 15px inset;
+}
+
+/*----------------------CONTENU ARTICLE----------------------*/
+
+         /*--------------PAGE ACCUEIL----------------*/
+#header{
+    width: 100px;
+    height: 500px;
+}
+                /*---------CARROUSEL----------*/
+}
+#slideshow{
+    width: 100%;
+    height: 1000px;
+    background-color: #1f1f1f;
+}
+#slideshow:before,#slideshow:after{
+	position: absolute;
+	bottom: 16px;
+	z-index: -10;
+	width: 50%;
+	height: 20px;
+	content: " ";
+	background:rgba(0,0,0,0.1);
+	box-shadow: 0 0 3px rgba(0,0,0, 0.4), 0 20px 10px rgba(0,0,0, 0.7);
+}
+#slideshow:before{
+	left:0;
+	transform: rotate(-4deg);
+}
+#slideshow:after{
+	right: 0;
+	transform: rotate(4deg);
+}
+#slideshow .contrainer{
+	position: relative;
+	width: 640px;
+	height: 310px;
+	overflow: hidden;
+}
+#slideshow .contrainer:after{
+	position:absolute;
+	bottom: 0; left: 0;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	background: #999;
+}
+#slideshow .slider{
+	position: absolute;
+	left: 0; top:0;
+	width: 400%;
+	height: 310px;
+}
+#slideshow figure{
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin-top: 1.16%;
+}
+#slideshow figure:after{
+	position: absolute;
+	display: block;
+	content: " "
+	top:0; left: 0;
+	width: 100%; height: 100%;
+	box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
+}
+@keyframes slider{
+	0%, 20%, 100% { left: 0 }
+	20%, 45%      { left: -100% }
+	50%, 70%      { left: -201% }   
+}
+#slideshow .slider{
+	animation: slider 32s infinite;
+}
+                /*---------CARROUSEL----------*/
+#bas_page1{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+#bas_page1 div{
+    width: 70%;
+}
+#bas_page1 h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    width: 20%;
+    height: 50px;
+    border:1.5px solid black;
+    margin:auto;
+}
+#bas_page1 p{
+    padding: 5%;
+}
+
+                    /*-----PAGE GALERIE-----*/
+body{
+    background-color:  #D9D9D9;
+}
+#barre_du_haut{
+    display: flex;
+    padding: 2%;
+    box-shadow: 0px 2px 20px grey;
+}
+#barre_du_haut section{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+#barre_du_haut h1{
+    display: flex;
+    width: 40%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    font-size: 300%;
+    font-family: 'Champagne';
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#page_galerie{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-top: 5%;
+}
+#encadre_galerie{
+    width: 90%;
+    background-color: #EC955B;
+    padding: 1%;
+    border-radius: 1%;
+}
+#colone{
+    display: flex;
+    justify-content: space-around;
+}
+#colone div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#galerie{
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    position: relative;
+    overflow: hidden;
+    transition: opacity .3s ease-in-out;
+}
+#galerie:hover{
+    opacity: 0.5;
+    transition-duration: 1sec;
+}
+
+#page_galerie #tri{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+}
+                    /*-----PAGE LIVRE D'OR-----*/
+#page_livredor{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-top: 5%;
+}
+#encadre_livredor{
+    width: 90%;
+    background-color: #EC955B;
+    padding: 1%;
+    border-radius: 1%;
+}
+#page_livredor #tri{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+}
+#case_texte img, h2{
+    display: flex;
+    justify-content: flex-start;
+}
+#commentaire{
+    padding-bottom: 2%;
+/*
+    border: 1px solid black;
+    border-radius: 10px;
+*/
+    padding: 1%;
+}
+#commentaire div{
+    display: flex;
+    align-items: center;
+}
+#commentaire h2{
+    padding-left: 2%;
+    font-family: 'Dancing script'
+}
+#commentaire p{
+    margin-top: 1%;
+    overflow: auto;
+}
+/*----------------------PIED DE L'ARTICLE----------------------*/
+
+footer{
+    display: flex;
+    background-color: #000033;
+    color:#DFFFDF;
+    position: inherit;
+    width: 100%;
+    bottom:0;
+    justify-content: space-around;
+    align-items: center;
+}
+/*
+#title{
+    text-align: center;
+    justify-content: center;
+}
+.boutonRetourAccueil {
+    background-color: white;
+    border-style: hidden;
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+}
+.contactTitre {
+    display: flex;
+    width: 100%;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    border-style: hidden;
+}
+#galerie{
+    text-align: center;
+    position: relative;
+    border:1.5px solid #EC955B;
+}*/
+
+}
+/*
+
+/*-------------------------------IDEE CARROUSEL-------------------------*/
+/*#galerie_images{
+    display: flex;
+    width: 90%;
+    height: auto;
+    border: 1px solid red;
+    background-color: #EC955B;
+}
+#galerie_images a{
+    width: 100%;
+    height: 10px;
+    border-radius: 10%;
+}*/
